@@ -2,6 +2,10 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    config:
+      freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 1, period: day}
     tables:
       - name: customers
       - name: my_first_dbt_model
