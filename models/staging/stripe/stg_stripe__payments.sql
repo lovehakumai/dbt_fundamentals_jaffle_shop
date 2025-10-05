@@ -3,9 +3,9 @@ with source as (
   ),
   renamed as (
       select
-          {{ adapter.quote("ID") }},
-        {{ adapter.quote("ORDERID") }},
-        {{ adapter.quote("PAYMENTMETHOD") }},
+          {{ adapter.quote("ID") }} as {{ adapter.quote("PAYMENT_ID") }},
+        {{ adapter.quote("ORDERID") }} as {{ adapter.quote("ORDER_ID") }},
+        {{ adapter.quote("PAYMENTMETHOD") }} as {{ adapter.quote("PAYMENT_METHOD") }},
         {{ adapter.quote("STATUS") }},
         {{ adapter.quote("AMOUNT") }},
         {{ adapter.quote("CREATED") }},
