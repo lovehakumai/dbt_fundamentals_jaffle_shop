@@ -12,16 +12,16 @@ models:
         data_tests:
           - unique
           - not_null
-      - name: status
+      - name: ORDER_STATUS
         data_tests:
           - accepted_values:
               arguments:
                 values:
                   - completed
+                  - return_pending
+                  - placed
                   - shipped
                   - returned
-                  - placed
-                  - return_pending
       - name: customer_id
         data_tests:
           - relationships:
