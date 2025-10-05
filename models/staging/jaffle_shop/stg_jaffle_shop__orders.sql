@@ -3,10 +3,10 @@ with source as (
   ),
   renamed as (
       select
-          {{ adapter.quote("ID") }},
+          {{ adapter.quote("ID") }} as {{ adapter.quote("ORDER_ID") }},
         {{ adapter.quote("USER_ID") }},
         {{ adapter.quote("ORDER_DATE") }},
-        {{ adapter.quote("STATUS") }},
+        {{ adapter.quote("STATUS") }} as {{adapter.quote("ORDER_STATUS")}},
         {{ adapter.quote("_ETL_LOADED_AT") }}
 
       from source
